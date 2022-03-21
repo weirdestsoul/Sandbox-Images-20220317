@@ -24,9 +24,9 @@ if (picWidth >= picHeight) {
 println(smallerDimension, largerDimension, widthLarger, heightLarger);
 //println(smallerDimension, largerDimension); //Verifying Variable details
 if (widthLarger == true) imageWidthRatio = largerDimension / largerDimension;
-if (widthLarger == true) imageHeightRatio = largerDimension / smallerDimension;
+if (widthLarger == true) imageHeightRatio = smallerDimension / largerDimension;
 if (heightLarger == true) imageHeightRatio = largerDimension / largerDimension;
-if (heightLarger == true) imageWidthRatio = largerDimension /smallerDimension;
+if (heightLarger == true) imageWidthRatio = smallerDimension /largerDimension;
 println(imageWidthRatio, imageHeightRatio, smallerDimension/largerDimension, 701.0/755.0); //verify variable values
 //note: println() also verifies decimal places, compiler will truncate
 //Answers must be 1.0 and between 0 & 1 (decimal)
