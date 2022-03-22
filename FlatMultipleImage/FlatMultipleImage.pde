@@ -2,9 +2,11 @@
 float rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1;
 float rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2;
 PImage pic1, pic2;
+color red=#B92424;
 //
 //Geometry
 fullScreen();
+//
 //size (900, 680);
 //Landscape Presentation, not square or portrait
 //
@@ -17,7 +19,7 @@ int pic1Width = 115;
 int pic1Height =85;
 int pic2Width = 1076;
 int pic2Height =674;
-int float (, float (,largerPic2Dimension, smallerPic2Dimension;
+int largerPic1Dimension, smallerPic1Dimension,largerPic2Dimension, smallerPic2Dimension;
 float imageWidthRatioPic1=0.0, imageHeightRatioPic1=0.0,imageWidthRatioPic2=0.0,imageHeightRatioPic2=0.0;
 Boolean widthPic1Larger=false, heightPic1Larger=false, widthPic2Larger=false, heightPic2Larger=false;
 if ( pic1Width >= pic1Height) {
@@ -60,8 +62,18 @@ rectYPic2 = height*1/2;
 rectWidthPic2 = width*6/8;
 rectHeightPic2 = height*1/2;
 //
+//Adjusted  widths and heights to rectangle layouts
+float pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted;
+pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
+pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
+pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
+pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
+//
 //Rectangle Layout & Image Printing on Canvas
+fill(red);
 rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);//Image 1, Landscape
 rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);//Image 2, Landscape
-image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
-image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
+//image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
+//image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
+image (pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted); 
+image (pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted); 
