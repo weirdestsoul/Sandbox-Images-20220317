@@ -53,21 +53,23 @@ if (heightPic2Larger == true);imageWidthRatioPic2 = float (smallerPic2Dimension)
 if (heightPic2Larger == true);imageHeightRatioPic2 = float (largerPic2Dimension)/float (largerPic2Dimension);
 println(imageWidthRatioPic1,imageHeightRatioPic1,imageWidthRatioPic2,imageHeightRatioPic2); //Verifying Variable Details (ratios)
 //
-rectXPic1 = width*1/4;
-rectYPic1 = height*0;
-rectWidthPic1 = width*1/2;
-rectHeightPic1 = height*1/2;
-rectXPic2 = width*1/8;
-rectYPic2 = height*1/2;
-rectWidthPic2 = width*6/8;
-rectHeightPic2 = height*1/2;
+rectXPic1 = displayWidth*1/4;
+rectYPic1 = displayHeight*0;
+rectWidthPic1 = displayWidth*1/2;
+rectHeightPic1 = displayHeight*1/2;
+rectXPic2 = displayWidth*1/8;
+rectYPic2 = displayHeight*1/2;
+rectWidthPic2 = displayWidth*6/8;
+rectHeightPic2 = displayHeight*1/2;
 //
 //Adjusted  widths and heights to rectangle layouts
 float pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted;
-pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
+pic1WidthAdjusted = rectWidthPic1* imageWidthRatioPic1;
 pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
 pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
 pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
+println (pic1Width, pic1Height,pic2Width, pic2Height);
+println (pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted);
 //
 //Rectangle Layout & Image Printing on Canvas
 fill(red);
@@ -75,5 +77,6 @@ rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);//Image 1, Landscape
 rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);//Image 2, Landscape
 //image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
 //image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
-image (pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted); 
-image (pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted); 
+image (pic1, rectXPic1, rectYPic1+(rectYPic2*1/8), pic1WidthAdjusted, pic1HeightAdjusted); 
+image (pic2, rectXPic2+(rectXPic2*9/8), rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted); 
+//Change the rect() varialbes to aspect ratio
