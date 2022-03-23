@@ -1,19 +1,40 @@
 //Global Variables
-//
-void setup () {}
-//
-void draw () {}
-//
-void keyPressed () {}
-//
-void mousePressed () {}
-//
-/*
-//Variables
 float rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1;
 float rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2;
 PImage pic1, pic2;
 color red=#B92424;
+int pic1Width=115;
+int pic1Height=85;
+int pic2Width=1076;
+int pic2Height=674;
+int largerPic1Dimension, smallerPic1Dimension,largerPic2Dimension, smallerPic2Dimension;
+float imageWidthRatioPic1=0.0, imageHeightRatioPic1=0.0,imageWidthRatioPic2=0.0,imageHeightRatioPic2=0.0;
+Boolean widthPic1Larger=false, heightPic1Larger=false, widthPic2Larger=false, heightPic2Larger=false;
+float pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted;
+//
+void setup () 
+{
+
+}
+//
+void draw () 
+{
+
+}
+//
+void keyPressed () 
+{
+
+}
+//
+void mousePressed () 
+{
+
+}
+//
+/*
+//Variables
+
 //
 //Geometry
 fullScreen();
@@ -26,13 +47,7 @@ pic1 = loadImage("roel.png");// Dimensions Width:115, Height:85
 pic2 = loadImage("yeyeeeeye.jpg");// Dimensions Width:1076, Height:674
 //
 //Aspect ratio calculations
-int pic1Width=115;
-int pic1Height=85;
-int pic2Width=1076;
-int pic2Height=674;
-int largerPic1Dimension, smallerPic1Dimension,largerPic2Dimension, smallerPic2Dimension;
-float imageWidthRatioPic1=0.0, imageHeightRatioPic1=0.0,imageWidthRatioPic2=0.0,imageHeightRatioPic2=0.0;
-Boolean widthPic1Larger=false, heightPic1Larger=false, widthPic2Larger=false, heightPic2Larger=false;
+
 if ( pic1Width >= pic1Height) {
 largerPic1Dimension = pic1Width;
 smallerPic1Dimension = pic1Height;
@@ -74,7 +89,7 @@ rectWidthPic2 = displayWidth*6/8;
 rectHeightPic2 = displayHeight*1/2;
 //
 //Adjusted  widths and heights to rectangle layouts
-float pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted;
+
 pic1WidthAdjusted = rectWidthPic1* imageWidthRatioPic1;
 pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
 pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
