@@ -15,10 +15,10 @@ pic1 = loadImage("roel.png");// Dimensions Width:115, Height:85
 pic2 = loadImage("yeyeeeeye.jpg");// Dimensions Width:1076, Height:674
 //
 //Aspect ratio calculations
-int pic1Width = 115;
-int pic1Height =85;
-int pic2Width = 1076;
-int pic2Height =674;
+int pic1Width=115;
+int pic1Height=85;
+int pic2Width=1076;
+int pic2Height=674;
 int largerPic1Dimension, smallerPic1Dimension,largerPic2Dimension, smallerPic2Dimension;
 float imageWidthRatioPic1=0.0, imageHeightRatioPic1=0.0,imageWidthRatioPic2=0.0,imageHeightRatioPic2=0.0;
 Boolean widthPic1Larger=false, heightPic1Larger=false, widthPic2Larger=false, heightPic2Larger=false;
