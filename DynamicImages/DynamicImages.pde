@@ -14,13 +14,13 @@ fullScreen();
 //
 populatingVariables();
 //
-imageDraw();
+
 }//End Setup
 //
 void draw () 
 {
 //Note: DRAW Loop repeats 60 times/second, static images should be in SETUP, "system resources"
-
+//Empty DRAW loop, must be present for JAVA compiler for dynamic programs
 
 }//End draw
 //
@@ -31,5 +31,5 @@ void keyPressed ()
 //
 void mousePressed () 
 {
-
+imageDraw();
 }//End mousePressed
